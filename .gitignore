@@ -2,3 +2,6 @@
 .webdsl-fragment-cache
 .webdsl-parsecache
 .saved-but-not-built
+.cache
+.dependencies.webdsl
+temp_test.db

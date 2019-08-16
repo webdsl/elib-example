@@ -53,18 +53,20 @@ template layoutHorizontal(){
   }
 }
 
-derive labelInputOutput Int
-derive labelInputOutput Float
-derive labelInputOutput Long
-derive labelInputOutput Bool
-derive labelInputOutput String
-derive labelInputOutput Text
-derive labelInputOutput WikiText
-derive labelInputOutput Email
-derive labelInputOutput Secret
-derive labelInputOutput Date
-
-derivetemplate labelInputOutput Type {
+expand
+  Int
+  Float
+  Long
+  Bool
+  String
+  Text
+  WikiText
+  Email
+  Secret
+  Date
+  to labelInputOutput
+  
+expandtemplate labelInputOutput to Type {
   template input( label: String, s: ref Type ){
     controlGroup( label ){
       input( s )[ all attributes ]
